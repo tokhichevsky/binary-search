@@ -3,6 +3,7 @@ function binarySearch(array, element) {
     let left = 0;
     let right = array.length - 1;
     let mid = Math.floor((left + right) / 2);
+    
     while ((right - left) >= 0 && sortedArray[mid][1] !== element ) {
         if (sortedArray[mid][1] < element) {
             left = mid + 1;
@@ -10,7 +11,6 @@ function binarySearch(array, element) {
             right = mid - 1;
         }
         mid = Math.floor((left + right) / 2);
-        console.log(left, right, mid);
     }
     if ((right - left) < 0) return -1;
     return sortedArray[mid][0];
